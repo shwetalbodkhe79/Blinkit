@@ -1,0 +1,46 @@
+.search{
+  
+ margin-top:0px;
+}
+.header{
+    height: 55px;
+    justify-content: center;
+    
+}
+.left-section{
+  width:150px;
+  margin-left: 70px;
+}
+.middle-section{
+  flex:1;
+  margin-right: 35px;
+  max-width: 500px;
+  display: inline-block;
+  margin-top:0;
+
+}
+.right-section{
+  width:200px;
+  
+}
+.youtubeicon{
+  height:50px;
+  width:40px;
+  margin-left: 40px;
+  margin-bottom: 20px;
+  display: inline-block;
+  
+}
+.threelines{
+  height:20px;
+  width:20px;
+ display: grid;
+ grid-template-columns: 1fr;
+ margin-top: 4px;
+  
+}
+.searchicon{
+  height:20px;
+  width:20px;
+  display: flex;
+}

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>flex-box practice</title>
+</head>
+
+<body>
+    <div style="
+    margin-bottom:30px;
+    display:flex;
+    flex-direction:row;
+
+    ">
+        <div style="background-color:lightblue">div1 </div>
+        <div style="background-color:lightpink">div2<p>text</p>
+        </div>
+    </div>
+
+    <div style="
+    display:flex;
+    flex-direction:row;
+    display:grid;
+    grid-template-columns:100px 1fr ;
+    margin-bottom:30px;
+    
+    ">
+        <div style="background-color:lightblue;width:100px;">text </div>
+        <div style="background-color:lightpink ; flex:1">flex1
+        </div>
+    </div>
+
+    <div style="
+    display:flex;
+    flex-direction:column;
+    grid-template-columns:100px 1fr 2fr;
+    display:grid;
+   
+    ">
+        <div style="background-color:lightblue; ">100px </div>
+        <div style="background-color:lightpink ; flex:1">1fr</div>
+        <div style="background-color:lightblue ; flex:2">2fr</div>
+        </div>
+    </div>
+
+    <div style="
+    flex-direction:column;
+    grid-template-columns:100px 1fr 2fr;
+    display:grid;
+   
+    ">
+        <div style="background-color:lightblue; ">100px </div>
+        <div style="background-color:lightpink ; flex:1">1fr</div>
+        <div style="background-color:lightblue ; flex:2">2fr</div>
+        </div>
+    </div>
+</body>
+
+</html>

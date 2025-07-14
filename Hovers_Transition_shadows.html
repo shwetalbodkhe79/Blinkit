@@ -1,0 +1,97 @@
+
+<style>
+    .subscribe-button{      /**CSS selector : which elememts we targeting */  
+        background-color: rgb(200, 0, 0 );
+        color:white;  /*text color*/
+        border:none;
+        padding-top:10px;
+        padding-left: 16px;
+        padding-right: 16px;
+        padding-bottom: 10px;
+       border-radius: 2px;
+       cursor: pointer;
+       margin-right: 9px;
+       transition: opacity 1s; /* transition takes two values 1. what we want to transition opacity smoothly and 2.how long was transition to take*/
+       
+    }
+
+    /* when we move cursor on button it hover with color green or use opacity property to faded hover on button(hover property) and when we click on button the color becomes blue (active property)*/
+
+    .subscribe-button:hover{
+       /*background-color: green;*/
+      
+       opacity: 0.13; /* dont change color when hover only faded. opacity is used to fade out an element: 
+                            If we go from one to zero , the elememts going to fade out
+                            If opacity goes below from zero then the elements foing to start to fade in means transparent*/
+      
+   
+                        }
+
+    .subscribe-button:active{
+        /*background-color: blue;*/
+        color:black;
+        opacity: 0.5;
+    }
+
+   .join-button{
+    background-color: white;
+    color:rgb(24, 147, 165);
+    border-color: rgb(26, 108, 158);
+    border-style: solid;
+     padding-top:12px;
+    padding-left: 15px;
+    padding-right: 15px;
+    padding-bottom: 12px;
+    border-radius:2px;
+    border-width:1px;
+    cursor: pointer;
+    margin-right: 9px;
+    transition:background-color 1s,color 1s;   /*transition property only work for hover property*/
+     
+    }
+
+    .join-button:hover{
+        background-color: rgb(33, 83, 121);
+        color:white;
+        
+    }
+    .join-button:active{
+        opacity:0.2;
+    }
+
+    .tweet-button{
+          background-color: rgb(130, 190, 230);
+          color: white;
+          border-radius: 20px;
+         border:none;
+         font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+         font-weight: bold;
+         font-size: 15px;
+         height:36px;
+         width:89px;
+         cursor:pointer;
+         transition:  background-color 2s;
+         /*box-shadow: 9px 8px 22px black;     /*box-shadow takes 4 values. first value for horizontal ,second value for vertical , third value for blur and forth value is color*/
+    }
+
+    .tweet-button:hover{  /*hover,active are psuedo classes*/
+        color: black; 
+        background-color: blue;
+        opacity: 0.5;
+        box-shadow: 4px 6px 22px black; 
+    }
+
+
+</style>
+<button class="subscribe-button">
+    SUBSCRIBE
+</button>
+
+<button class="join-button">
+    JOIN
+</button>
+
+<button class="tweet-button">
+    Tweet
+</button><br/>
+

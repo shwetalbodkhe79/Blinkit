@@ -1,0 +1,442 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Youtube.com</title>
+    <style>
+        .search {
+            flex: 1;
+            height: 36px;
+            padding: 0 10px;
+            font-size: 16px;
+            border: 1px solid #ccc;
+            border-right: none;
+            border-radius: 20px 0 0 20px;
+            outline: none;
+        }
+
+        .header {
+            height: 55px;
+            justify-content: space-between;
+            display: flex;
+            align-items: center;
+            background-color: white;
+            padding: 10px 20px;
+            border-bottom: 1px solid #ddd;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            margin-left: 80px;
+        }
+
+        .left-section {
+            width: 150px;
+            margin-left: 70px;
+        }
+
+        .middle-section {
+            display: flex;
+            align-items: center;
+            max-width: 600px;
+            flex: 1;
+        }
+
+        .right-section {
+            width: 200px;
+        }
+
+        .youtubeicon {
+            height: 50px;
+            width: 40px;
+            margin-left: 40px;
+            margin-bottom: 20px;
+            display: inline-block;
+        }
+
+        .threelines {
+            height: 20px;
+            width: 20px;
+            display: grid;
+            grid-template-columns: 1fr;
+            margin-top: 4px;
+        }
+
+        .searchicon {
+            height: 36px;
+            width: 50px;
+            background-color: #f8f8f8;
+            border: 1px solid #ccc;
+            border-left: none;
+            border-radius: 0 20px 20px 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+        }
+
+        p {
+            font-family: Roboto, Arial;
+            margin-top: 0;
+            margin-bottom: 1;
+            margin-right: 0;
+        }
+
+        body {
+            margin: 0;
+        }
+
+        .thm1 {
+            height: 100px;
+            width: 200px;
+            display: block;
+            margin-left: 40px;
+        }
+
+        .p1 {
+            color: black;
+            font-size: 12px;
+            font-weight: bold;
+            font-family: Arial, Helvetica, sans-serif;
+            width: 150px;
+        }
+
+        .p2 {
+            color: rgb(56, 55, 55);
+            margin-bottom: 0px;
+            line-height: 20px;
+            font-size: 13px;
+        }
+
+        .p3 {
+            color: rgb(59, 59, 59);
+            margin-top: 0px;
+            font-size: 13px;
+        }
+
+         .youtubeicon {
+            height: 30px;
+            width: auto;
+            margin-bottom: 4px;
+        }
+
+        .threelines {
+            height: 24px;
+            width: 24px;
+            cursor: pointer;
+        }
+
+        .profile {
+            height: 40px;
+            width: 40px;
+            border-radius: 80%;
+            margin-top: 9px;
+            margin-right: 6px;
+            margin-left: 40px;
+        }
+
+        .video-text {
+            width: 200px;
+        }
+
+        .video-info {
+            display: flex;
+            margin-top: 0px;
+            margin-right: 0px;
+        }
+
+        .bell {
+            height: 30px;
+            width: 30px;
+            justify-items: center;
+            justify-content: center;
+        }
+
+        .sidebar {
+            position: fixed;
+            top: 55px;
+            left: 0;
+            width: 80px;
+            height: 100vh;
+            background-color: white;
+            border-right: 1px solid #ddd;
+            padding-top: 10px;
+            z-index: 99;
+        }
+
+        .sidebar-item {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-bottom: 20px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+            padding: 8px 0;
+        }
+
+        .sidebar-item:hover {
+            background-color: #f2f2f2;
+        }
+
+        .sidebar-icon {
+            height: 24px;
+            width: 24px;
+            margin-bottom: 6px;
+        }
+
+        .sidebar-label {
+            font-size: 10px;
+            font-family: Arial, sans-serif;
+            text-align: center;
+        }
+
+        .video-grid {
+            display: grid;
+            grid-template-columns:1fr 2fr;
+            gap: 20px;
+            padding: 20px;
+            margin-left: 100px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="sidebar">
+        <div class="sidebar-item">
+            <img src="/icons/home-icon.png" class="sidebar-icon">
+            <p class="sidebar-label">Home</p>
+        </div>
+        <div class="sidebar-item">
+            <img src="/icons/short.png" class="sidebar-icon">
+            <p class="sidebar-label">Shorts</p>
+        </div>
+        <div class="sidebar-item">
+            <img src="/icons/originals.png" class="sidebar-icon">
+            <p class="sidebar-label">Subscriptions</p>
+        </div>
+        <div class="sidebar-item">
+            <img src="/icons/music.png" class="sidebar-icon">
+            <p class="sidebar-label">You</p>
+        </div>
+        <div class="sidebar-item">
+            <img src="/icons/history.png" class="sidebar-icon">
+            <p class="sidebar-label">History</p>
+        </div>
+    </div>
+
+    <div class="header">
+        <div class="left-section">
+            <img src="/icons/three-lines.png" class="threelines" alt="Menu">
+            <img src="/icons/youtube.png" class="youtubeicon" alt="YouTube">
+        </div>
+        <div class="middle-section">
+            <input type="text" placeholder="Search" class="search">
+            <div>
+                <img src="/icons/search.png" class="searchicon">
+            </div>
+        </div>
+        <div class="right-section">
+            <img src="/icons/bell.png" class="bell">
+        </div>
+    </div>
+
+    <div class="video-grid">
+        <!-- Keep all your video-preview blocks inside this grid -->
+        <!-- Example block below -->
+        <div class="video-preview">
+            <img src="thumbnail/thumbnail-1.webp" class="thm1">
+            <div class="video-info">
+                <img src="thumbnail/thumbnail-2.webp" class="profile">
+                <div class="video-text">
+                    <p class="p1">Talking Tech and AI with Google CEO Sundar Pichai!</p>
+                    <p class="p2">Marques Brownlee</p>
+                    <p class="p3">3.4M views &#183 6 months ago</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="video-preview">
+            <img src="thumbnail/thumbnail-2.webp" class="thm1">
+            <div class="video-info">
+                <img src="thumbnail/thumbnail-2.webp" class="profile">
+                <div class="video-text">
+                    <p class="p1">Talking Tech and AI with Google CEO Sundar Pichai!</p>
+                    <p class="p2">Marques Brownlee</p>
+                    <p class="p3">3.4M views &#183 6 months ago</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="video-preview">
+            <img src="thumbnail/thumbnail-3.webp" class="thm1">
+            <div class="video-info">
+                <img src="thumbnail/thumbnail-3.webp" class="profile">
+                <div class="video-text">
+                    <p class="p1">Talking Tech and AI with Google CEO Sundar Pichai!</p>
+                    <p class="p2">Marques Brownlee</p>
+                    <p class="p3">3.4M views &#183 6 months ago</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="video-preview">
+            <img src="thumbnail/thumbnail-4.webp" class="thm1">
+            <div class="video-info">
+                <img src="thumbnail/thumbnail-2.webp" class="profile">
+                <div class="video-text">
+                    <p class="p1">Talking Tech and AI with Google CEO Sundar Pichai!</p>
+                    <p class="p2">Marques Brownlee</p>
+                    <p class="p3">3.4M views &#183 6 months ago</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="video-preview">
+            <img src="thumbnail/thumbnail-5.webp" class="thm1">
+            <div class="video-info">
+                <img src="thumbnail/thumbnail-2.webp" class="profile">
+                <div class="video-text">
+                    <p class="p1">Talking Tech and AI with Google CEO Sundar Pichai!</p>
+                    <p class="p2">Marques Brownlee</p>
+                    <p class="p3">3.4M views &#183 6 months ago</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="video-preview">
+            <img src="thumbnail/thumbnail-6.webp" class="thm1">
+            <div class="video-info">
+                <img src="thumbnail/thumbnail-5.webp" class="profile">
+                <div class="video-text">
+                    <p class="p1">Talking Tech and AI with Google CEO Sundar Pichai!</p>
+                    <p class="p2">Marques Brownlee</p>
+                    <p class="p3">3.4M views &#183 6 months ago</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="video-preview">
+            <img src="thumbnail/thumbnail-7.jpg" class="thm1">
+            <div class="video-info">
+                <img src="thumbnail/thumbnail-2.webp" class="profile">
+                <div class="video-text">
+                    <p class="p1">Talking Tech and AI with Google CEO Sundar Pichai!</p>
+                    <p class="p2">Marques Brownlee</p>
+                    <p class="p3">3.4M views &#183 6 months ago</p>
+                </div>
+            </div>
+        </div>
+
+         <div class="video-preview">
+            <img src="thumbnail/thumbnail-8.jpg" class="thm1">
+            <div class="video-info">
+                <img src="thumbnail/thumbnail-6.webp" class="profile">
+                <div class="video-text">
+                    <p class="p1">Talking Tech and AI with Google CEO Sundar Pichai!</p>
+                    <p class="p2">Marques Brownlee</p>
+                    <p class="p3">3.4M views &#183 6 months ago</p>
+                </div>
+            </div>
+        </div>
+
+         <div class="video-preview">
+            <img src="thumbnail/thumbnail-7.jpg" class="thm1">
+            <div class="video-info">
+                <img src="thumbnail/thumbnail-2.webp" class="profile">
+                <div class="video-text">
+                    <p class="p1">Talking Tech and AI with Google CEO Sundar Pichai!</p>
+                    <p class="p2">Marques Brownlee</p>
+                    <p class="p3">3.4M views &#183 6 months ago</p>
+                </div>
+            </div>
+        </div>
+
+         <div class="video-preview">
+            <img src="thumbnail/thumbnail-9.jpg" class="thm1">
+            <div class="video-info">
+                <img src="thumbnail/thumbnail-1.webp" class="profile">
+                <div class="video-text">
+                    <p class="p1">Talking Tech and AI with Google CEO Sundar Pichai!</p>
+                    <p class="p2">Marques Brownlee</p>
+                    <p class="p3">3.4M views &#183 6 months ago</p>
+                </div>
+            </div>
+        </div>
+
+         <div class="video-preview">
+            <img src="thumbnail/thumbnail-10.jpg" class="thm1">
+            <div class="video-info">
+                <img src="thumbnail/thumbnail-6.webp" class="profile">
+                <div class="video-text">
+                    <p class="p1">Talking Tech and AI with Google CEO Sundar Pichai!</p>
+                    <p class="p2">Marques Brownlee</p>
+                    <p class="p3">3.4M views &#183 6 months ago</p>
+                </div>
+            </div>
+        </div>
+
+         <div class="video-preview">
+            <img src="thumbnail/thumbnail-11.jpg" class="thm1">
+            <div class="video-info">
+                <img src="thumbnail/thumbnail-4.webp" class="profile">
+                <div class="video-text">
+                    <p class="p1">Talking Tech and AI with Google CEO Sundar Pichai!</p>
+                    <p class="p2">Marques Brownlee</p>
+                    <p class="p3">3.4M views &#183 6 months ago</p>
+                </div>
+            </div>
+        </div>
+
+         <div class="video-preview">
+            <img src="thumbnail/thumbnail-12.jpg" class="thm1">
+            <div class="video-info">
+                <img src="thumbnail/thumbnail-2.webp" class="profile">
+                <div class="video-text">
+                    <p class="p1">Talking Tech and AI with Google CEO Sundar Pichai!</p>
+                    <p class="p2">Marques Brownlee</p>
+                    <p class="p3">3.4M views &#183 6 months ago</p>
+                </div>
+            </div>
+        </div>
+
+         <div class="video-preview">
+            <img src="thumbnail/thumbnail-13.jpg" class="thm1">
+            <div class="video-info">
+                <img src="thumbnail/thumbnail-4.webp" class="profile">
+                <div class="video-text">
+                    <p class="p1">Talking Tech and AI with Google CEO Sundar Pichai!</p>
+                    <p class="p2">Marques Brownlee</p>
+                    <p class="p3">3.4M views &#183 6 months ago</p>
+                </div>
+            </div>
+        </div>
+
+         <div class="video-preview">
+            <img src="thumbnail/thumbnail-15.jpg" class="thm1">
+            <div class="video-info">
+                <img src="thumbnail/thumbnail-2.webp" class="profile">
+                <div class="video-text">
+                    <p class="p1">Talking Tech and AI with Google CEO Sundar Pichai!</p>
+                    <p class="p2">Marques Brownlee</p>
+                    <p class="p3">3.4M views &#183 6 months ago</p>
+                </div>
+            </div>
+        </div>
+
+         <div class="video-preview">
+            <img src="thumbnail/thumbnail-16.jpg" class="thm1">
+            <div class="video-info">
+                <img src="thumbnail/thumbnail-2.webp" class="profile">
+                <div class="video-text">
+                    <p class="p1">Talking Tech and AI with Google CEO Sundar Pichai!</p>
+                    <p class="p2">Marques Brownlee</p>
+                    <p class="p3">3.4M views &#183 6 months ago</p>
+                </div>
+            </div>
+        </div>
+        <!-- Repeat the above block for all your other videos -->
+    </div>
+</body>
+
+</html>

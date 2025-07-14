@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Excercise4</title>
+
+    <style>
+        .input1,
+        .input2{
+            display:block;
+
+        }
+        .p1
+        {
+            display: inline-block;
+            width: 300px;
+            vertical-align: middle;
+        }
+        .btn1,
+        .btn2{
+            display: inline-block;
+        }
+        .google{
+            width:25%;
+            margin-left: 30%;
+            display: block;
+            margin-bottom: 15px;
+        }
+        .input{
+            width:40%;
+            border-radius: 10px;
+            box-shadow: 2px 2px 10px rgb(176, 175, 175);
+            height: 22px;
+            border: none;
+            display: block;
+            margin-left: 25%;
+            margin-bottom: 20px;
+            
+        }
+        .first{
+           display: inline-block;
+           width: 90px;
+           height: 25px;
+           margin-bottom: 9px;
+           margin-right: 4px;
+           margin-left: 320px;
+           border-radius: 5px;
+           box-shadow: 2px 2px 10px rgb(148, 147, 147);
+           border: solid;
+           border-color: gray;
+           padding-left: 10px;
+
+        }
+        .last{
+            width: 90px;
+            border-radius: 5px;
+            height: 25px;
+            border: solid;
+           border-color: gray;
+           padding-left: 10px;
+        }
+        .email{
+          display: block;
+          margin-bottom: 20px;
+          width:195px;
+           margin-left: 320px;
+           height: 25px;
+           border-radius: 5px;
+           border: solid;
+           border-color: gray;
+           padding-left: 10px;
+        }
+        .signup{
+                width:30%;
+                 margin-left: 300px;
+                 border-radius: 5px;
+                 height: 25px;
+                 background-color: blue;
+                 color: white;
+                 border: none;
+                 transition: transform 1s ease;
+                 margin-bottom: 100px;
+        }
+        .signup:hover{
+            opacity: 0.5;
+            transform: scale(1.5);
+        }
+        .signup:active{
+            color: black;
+        }
+        .formg{
+            color: rgb(12, 183, 46);
+            margin-left:350px;
+        }
+        .pickup{
+             background-color: rgb(201, 200, 200);
+             border: none;
+             height: 20px;
+             width: 350px;
+             margin-bottom: 10px;
+             padding-left: 10px;
+             border-radius: 1px;
+            margin-left: 250px;
+             
+             
+        }
+        .pickup::placeholder{
+            color: black;
+        }
+        .later{
+         background-color: rgb(201, 200, 200);
+             border: none;
+             height: 20px;
+             width: 350px;
+             margin-bottom: 10px;
+             padding-left: 10px;
+             border-radius: 1px;
+             margin-left: 250px;
+             margin-bottom: 30px;
+        }
+        .later::placeholder{
+            color: black;
+        }
+        .request{
+            background-color: black;
+            color: white;
+            width:15%;
+            border: none;
+            height: 30px;
+            margin-left: 250px;
+            margin-right: 30px;
+            transition: transform 2s ease;
+        }
+        .request:hover{
+            transform: scaleX(1.1);
+        }
+        .request:active{
+            box-shadow: 5px 5px 5px rgb(66, 65, 65);
+        }
+        .schedule{
+             width:20%;
+            border: none;
+            height: 30px;
+            color: black;
+            background-color: gray;
+            font-weight: bold;
+            transition: transform 2s ease;
+        }
+         .schedule:hover{
+            transform: scaleX(1.1);
+        }
+        .schedule:active{
+            box-shadow: 5px 5px 5px rgb(66, 65, 65);
+        }
+        .ridenow{
+            color: rgb(132, 9, 9);
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+
+    <img src="../thumbnail/Google.webp" class="google" >
+    <input type="text" placeholder="Search Google or type a URL" class="input">
+    
+        <input type="text" placeholder="Name" class="input1">
+    
+        <input type="text" placeholder="Email" class="input2">
+    
+        <p class="p1">
+            Thanks for chatting with our customer support. Would you like to take our quick survey?
+        </p>
+        <button class="btn1">Yes</button>
+        <button class="btn2"> No</button>
+
+        <p>
+            <h2 class="formg">Google Form</h2>
+            <input type="text" placeholder="First name" class="first">
+            <input type="text" placeholder="Last name" class="last">
+            <input type="text" placeholder="Email" class="email">
+            
+            <button class="signup">Sign Up</button>
+
+        </p>
+
+<p>
+    <h2 class="ridenow">Request a ride now</h2>
+    <input type="text" placeholder="Enter pickup location" class="pickup"><br/>
+    <input type="text" placeholder="Enter destination" class="later"><br/>
+    <button class="request">Request now</button >
+    <button class="schedule">Schedule for later</button>
+</p>
+
+</body>
+</html>
